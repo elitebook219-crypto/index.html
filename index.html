@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Silfi ❤️</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ffe6e6,#fff0f5);
+    font-family:Arial, sans-serif;
+}
+
+.surat{
+    width:320px;
+    cursor:pointer;
+    transition:.3s;
+    animation: goyang 1.5s infinite;
+}
+
+.surat:hover{
+    transform:scale(1.05);
+}
+
+@keyframes goyang{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-8px)}
+    100%{transform:translateY(0)}
+}
+
+.petunjuk{
+    text-align:center;
+    margin-top:10px;
+    color:#d63384;
+    font-weight:bold;
+}
+
+.isi{
+    display:none;
+    background:white;
+    max-width:500px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+.isi img{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+button{
+    border:none;
+    padding:12px 24px;
+    border-radius:10px;
+    cursor:pointer;
+    color:white;
+    font-size:16px;
+    margin:10px;
+}
+
+.merah{
+    background:#ff4d4d;
+}
+
+.hijau{
+    background:#28a745;
+}
+</style>
+</head>
+<body>
+
+<div id="amplop">
+    <div class="surat" onclick="bukaSurat()">
+        📩
+        <div class="petunjuk">
+            Klik Surat Ini ❤️
+        </div>
+    </div>
+</div>
+
+<div class="isi" id="isiSurat">
+
+    <img src="LINK_FOTO_KAMU" alt="Foto">
+
+    <h2>Untuk Silfi ❤️</h2>
+
+    <p>
+        sayanggg maaf ya aku nggak peka tapi kamu tau nggak kalo tanggal
+        08/06/2026 itu hari yang paling membuatku bahagia karna bisa
+        memilikimu.
+    </p>
+
+    <p>
+        jujur kamu wanita pertama yang membuatku bahagia.
+    </p>
+
+    <p>
+        sekali lagi maaf ya 🙂‍↕️
+    </p>
+
+    <p>
+        tolong pilih salah satu tombol ini ya sayang.
+    </p>
+
+    <button class="merah" onclick="kirimUdahan()">
+        Udahan
+    </button>
+
+    <button class="hijau" onclick="kirimLanjut()">
+        Lanjut
+    </button>
+
+</div>
+
+<script>
+
+function bukaSurat(){
+    document.getElementById("amplop").style.display="none";
+    document.getElementById("isiSurat").style.display="block";
+}
+
+// GANTI DENGAN NOMOR WA KAMU
+const nomor = "6281234567890";
+
+function kirimUdahan(){
+    const pesan = encodeURIComponent(
+        "Silfi memilih tombol: UDAHAN ❤️"
+    );
+
+    window.open(
+        `https://wa.me/${nomor}?text=${pesan}`,
+        "_blank"
+    );
+}
+
+function kirimLanjut(){
+    const pesan = encodeURIComponent(
+        "Silfi memilih tombol: LANJUT ❤️"
+    );
+
+    window.open(
+        `https://wa.me/${nomor}?text=${pesan}`,
+        "_blank"
+    );
+}
+
+</script>
+
+</body>
+</html>
